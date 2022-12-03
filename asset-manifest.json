@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gpt-landing-page/static/css/main.e6c13ad2.css",
+    "main.js": "/gpt-landing-page/static/js/main.b6fa3cee.js",
+    "static/js/787.28cb0dcd.chunk.js": "/gpt-landing-page/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/gpt-landing-page/index.html",
+    "main.e6c13ad2.css.map": "/gpt-landing-page/static/css/main.e6c13ad2.css.map",
+    "main.b6fa3cee.js.map": "/gpt-landing-page/static/js/main.b6fa3cee.js.map",
+    "787.28cb0dcd.chunk.js.map": "/gpt-landing-page/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.b6fa3cee.js"
+  ]
+}
