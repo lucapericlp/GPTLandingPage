@@ -2,6 +2,11 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
 
+interface CustomProps {
+  readonly left?: any;
+  readonly right?: any;
+}
+
 const LandingPage = () => {
   return (
     <Container>
@@ -112,12 +117,6 @@ const ListItem = styled.li`
   align-items: center;
 `;
 
-
-interface CustomProps{
-  readonly left?: any;
-  readonly right?: any;
-}
-
 const ListTitle = styled.h3<CustomProps>`
   font-size: 20px;
   font-weight: 500;
@@ -126,7 +125,7 @@ const ListTitle = styled.h3<CustomProps>`
     props.left &&
     css`
       align-self: flex-start;
-  `};
+    `};
   ${(props) =>
     props.right &&
     css`
