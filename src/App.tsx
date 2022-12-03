@@ -19,33 +19,33 @@ const LandingPage = () => {
       <Content>
         <List>
           <ListItem>
-            <Title left>Interviewing is time-consuming.</Title>
+            <ListTitle left>Interviewing is time-consuming.</ListTitle>
             <Paragraph right>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <Title right>It can be draining.</Title>
+            <ListTitle right>It can be draining.</ListTitle>
             <Paragraph left>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <Title left>
+            <ListTitle left>
               It removes your focus on shipping.
-            </Title>
+            </ListTitle>
             <Paragraph right>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <Title right>It can be difficult to find talent.</Title>
+            <ListTitle right>It can be difficult to find talent.</ListTitle>
             <Paragraph left>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <Title left>It's challenging to make decisions.</Title>
+            <ListTitle left>It's challenging to make decisions.</ListTitle>
             <Paragraph right>
               Lorem ipsum dolor sit amet.
             </Paragraph>
@@ -112,7 +112,13 @@ const ListItem = styled.li`
   align-items: center;
 `;
 
-const Title = styled.h3`
+
+interface CustomProps{
+  readonly left?: any;
+  readonly right?: any;
+}
+
+const ListTitle = styled.h3<CustomProps>`
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -120,7 +126,7 @@ const Title = styled.h3`
     props.left &&
     css`
       align-self: flex-start;
-    `};
+  `};
   ${(props) =>
     props.right &&
     css`
@@ -128,7 +134,7 @@ const Title = styled.h3`
     `};
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled.p<CustomProps>`
   font-size: 16px;
   font-weight: 300;
   ${(props) =>
