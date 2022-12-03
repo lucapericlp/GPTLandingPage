@@ -8,8 +8,11 @@ const LandingPage = () => {
       <Header>
         <h1>Welcome to My App!</h1>
       </Header>
-      <Content>
+      <Hero>
         <p>This is my awesome React app with a gradient background!</p>
+      </Hero>
+      <Content>
+        <p>This is some additional content below the hero div.</p>
       </Content>
     </Container>
   );
@@ -26,6 +29,12 @@ const Header = styled.header`
   text-align: center;
   color: white;
   background: ${lighten(0.1, '#0083b0')};
+`;
+
+const Hero = styled.div`
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #00b4db, #0083b0);
 `;
 
 const Content = styled.main`
