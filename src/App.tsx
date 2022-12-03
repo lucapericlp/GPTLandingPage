@@ -9,10 +9,17 @@ const LandingPage = () => {
         <h1>Welcome to My App!</h1>
       </Header>
       <Hero>
-        <p>This is my awesome React app with a gradient background!</p>
+        <Title>
+          <h1>Welcome to My App!</h1>
+        </Title>
       </Hero>
       <Content>
-        <p>This is some additional content below the hero div.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          malesuada quam vel nisi dignissim, vel viverra velit lobortis.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Suspendisse potenti.
+        </p>
       </Content>
     </Container>
   );
@@ -25,22 +32,28 @@ const Container = styled.div`
 `;
 
 const Header = styled.header`
-  padding: 20px;
-  text-align: center;
-  color: white;
-  background: ${lighten(0.1, '#0083b0')};
+  display: none;
 `;
 
 const Hero = styled.div`
   height: 50vh;
   width: 100%;
   background: linear-gradient(to bottom, #00b4db, #0083b0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Title = styled.div`
+  color: white;
+  text-align: center;
+  background: none;
 `;
 
 const Content = styled.main`
   padding: 20px;
-  color: white;
-  background: ${lighten(0.2, '#0083b0')};
+  color: black;
+  background: white;
 `;
 
 export default LandingPage;
