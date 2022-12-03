@@ -17,13 +17,40 @@ const LandingPage = () => {
         </Title>
       </Hero>
       <Content>
-        <ul>
-          <li>Interviewing is time-consuming.</li>
-          <li>It can be draining.</li>
-          <li>It removes your focus on shipping new things for clients.</li>
-          <li>It can be difficult to find the right candidates.</li>
-          <li>It's challenging to make objective hiring decisions.</li>
-        </ul>
+        <List>
+          <ListItem>
+            <ListTitle>Interviewing is time-consuming.</ListTitle>
+            <Paragraph>
+              Lorem ipsum dolor sit amet.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <ListTitle>It can be draining.</ListTitle>
+            <Paragraph>
+              Lorem ipsum dolor sit amet.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <ListTitle>
+              It removes your focus on shipping.
+            </ListTitle>
+            <Paragraph>
+              Lorem ipsum dolor sit amet.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <ListTitle>It can be difficult to find talent.</ListTitle>
+            <Paragraph>
+              Lorem ipsum dolor sit amet.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <ListTitle>It's challenging to make decisions.</ListTitle>
+            <Paragraph>
+              Lorem ipsum dolor sit amet.
+            </Paragraph>
+          </ListItem>
+        </List>
       </Content>
     </Container>
   );
@@ -65,6 +92,26 @@ const Content = styled.main`
   color: black;
   background: white;
   height: 100%;
+`;
+
+const List = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const ListItem = styled.li`
+  margin-bottom: 20px;
+`;
+
+const ListTitle = styled.h3`
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+`;
+
+const Paragraph = styled.p`
+  font-size: 16px;
+  font-weight: 300;
 `;
 
 export default LandingPage;
