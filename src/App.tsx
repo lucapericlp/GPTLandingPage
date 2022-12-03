@@ -19,34 +19,34 @@ const LandingPage = () => {
       <Content>
         <List>
           <ListItem>
-            <ListTitle>Interviewing is time-consuming.</ListTitle>
-            <Paragraph>
+            <Title left>Interviewing is time-consuming.</Title>
+            <Paragraph right>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <ListTitle>It can be draining.</ListTitle>
-            <Paragraph>
+            <Title right>It can be draining.</Title>
+            <Paragraph left>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <ListTitle>
+            <Title left>
               It removes your focus on shipping.
-            </ListTitle>
-            <Paragraph>
+            </Title>
+            <Paragraph right>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <ListTitle>It can be difficult to find talent.</ListTitle>
-            <Paragraph>
+            <Title right>It can be difficult to find talent.</Title>
+            <Paragraph left>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
           <ListItem>
-            <ListTitle>It's challenging to make decisions.</ListTitle>
-            <Paragraph>
+            <Title left>It's challenging to make decisions.</Title>
+            <Paragraph right>
               Lorem ipsum dolor sit amet.
             </Paragraph>
           </ListItem>
@@ -92,26 +92,55 @@ const Content = styled.main`
   color: black;
   background: white;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const List = styled.ul`
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ListItem = styled.li`
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-const ListTitle = styled.h3`
+const Title = styled.h3`
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 10px;
+  ${(props) =>
+    props.left &&
+    css`
+      align-self: flex-start;
+    `};
+  ${(props) =>
+    props.right &&
+    css`
+      align-self: flex-end;
+    `};
 `;
 
 const Paragraph = styled.p`
   font-size: 16px;
   font-weight: 300;
+  ${(props) =>
+    props.left &&
+    css`
+      align-self: flex-end;
+    `};
+  ${(props) =>
+    props.right &&
+    css`
+      align-self: flex-start;
+    `};
 `;
 
 export default LandingPage;
