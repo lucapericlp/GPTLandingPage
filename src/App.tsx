@@ -10,16 +10,20 @@ const LandingPage = () => {
       </Header>
       <Hero>
         <Title>
-          <h1>Welcome to My App!</h1>
+          <h1>Intraviewer</h1>
+          <Subtitle>
+            Recruit the best talent while remaining focused on your work.
+          </Subtitle>
         </Title>
       </Hero>
       <Content>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada quam vel nisi dignissim, vel viverra velit lobortis.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Suspendisse potenti.
-        </p>
+        <ul>
+          <li>Interviewing is time-consuming.</li>
+          <li>It can be draining.</li>
+          <li>It removes your focus on shipping new things for clients.</li>
+          <li>It can be difficult to find the right candidates.</li>
+          <li>It's challenging to make objective hiring decisions.</li>
+        </ul>
       </Content>
     </Container>
   );
@@ -50,10 +54,17 @@ const Title = styled.div`
   background: none;
 `;
 
+const Subtitle = styled.p`
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+`;
+
 const Content = styled.main`
   padding: 20px;
   color: black;
   background: white;
+  height: 100%;
 `;
 
 export default LandingPage;
